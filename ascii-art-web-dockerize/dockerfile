@@ -1,0 +1,45 @@
+# Use the official Golang image as the build environment.
+
+
+# The image is based on Alpine Linux and includes Go 1.22.3.
+FROM golang:1.22.3-alpine AS build
+
+# Set the working directory inside the container to /app.
+WORKDIR /app
+
+# Copy all files from the current directory on the host to the /app directory in the container.
+COPY . .
+
+# Build the Go application and output the binary as 'main'.
+RUN go build -o main .
+
+# Use a smaller base image for the final application container.
+
+# This is an Alpine Linux image with no Go installed.
+FROM alpine 
+
+# Set the working directory inside the container to /app.
+WORKDIR /app
+
+# Copy the built binary  from the first bld the build stage into the /app directory of this stage.
+COPY --from=build /app/main .
+COPY --from=build  /app/Templat /app/Templat
+COPY --from=build  /app/css /app/css
+COPY --from=build  /app/banner /app/banner
+COPY --from=build  /app/Ascii-art /app/Ascii-art
+COPY --from=build  /app/Handeler /app/Handeler
+
+# Install Bash shell in the final image. Alpine's default shell is sh, so this step is optional.
+RUN apk add bash
+
+# Run the application as a non-root user named 'nobody' for security reasons.
+USER nobody
+
+# Specify the command to run the application. This will be executed when the container starts.
+CMD [ "./main" ]
+
+# LABELs provide information about the image such as maintainer, version, and description.
+LABEL maintainer1="yjaouhar <https://learn.zone01oujda.ma/git/yjaouhar> " \
+      maintainer2="selasly https://learn.zone01oujda.ma/git/selasly"\
+      version="1.0" \
+      Description="This image contains a Go application built from source. It is based on Alpine Linux and includes only the necessary components for running the application."

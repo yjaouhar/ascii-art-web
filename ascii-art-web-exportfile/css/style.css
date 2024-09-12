@@ -1,0 +1,315 @@
+body {
+    background-image: url(image/bck.png);
+}
+
+.img {
+    width: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.titel {
+   position:fixed;
+   top: 1px;
+   left: 40%;
+   font-size: 3vw;
+}
+.emoji {
+    width: 10%;
+    position: fixed;
+    top: 50px;
+    right: 7%;
+}
+
+.text {
+
+    width: 35%;
+    height: 140px;
+    position: fixed;
+    top: 100px;
+    left: 34%;
+
+}
+.textarea {
+   width: 100%;
+   height: 120px;
+    font-size: 1.5vw;
+    box-sizing: border-box;
+    border: 2px solid #999c9f;
+    border-radius: 5px;
+    resize: none;
+    padding-left: 85px;
+    padding-top: 35px;
+    white-space:pre;
+    
+}
+.point {
+     width: 15%;
+     position: fixed;
+    left: 10vw;
+     top: 100px;
+}
+.label{
+    font-size: 2vw;
+    position: fixed;
+    font-weight: 900;
+    top: 280px;
+    left: 46vw;
+}
+.group{
+    font-size: 1vw;
+    border: solid 2px rgb(37, 194, 37);
+    font-weight: 900;
+    color: rgb(7, 7, 7);
+    background-color: #c8e6ee;
+    position: fixed;
+    top: 330px;
+    left: 47.5svw;
+}
+.text2 {
+    width: 100%;
+    padding-left: 5%;
+    position: fixed;
+    top: 450px;
+}
+.textarea2 {
+color: #ffffff;
+padding-top: 7vh;
+padding-left: 6vw;
+background-color: black;
+width:90% ;
+height: 330px;
+box-sizing: border-box;
+border-bottom: 2px solid gray;
+border-radius: 8px 8px 20px 20px;
+white-space: pre;
+resize: none;
+}
+.bar{
+    background-color: rgb(62,62,62);
+    width: 90%;
+    height: 50px;
+    border-top: 2px solid gray;
+    border-radius: 20px 20px 0px 0px;
+    position: fixed;
+    top: 420px;
+   
+}
+
+
+.red{
+    width: 5%;
+    height: 32px;
+   border-radius: 8px;
+    position: fixed;
+    top: 430px;
+    left: 6%;
+}
+.yellow{
+    background-color: rgb(251, 255, 0);
+    font-size: 1vw;
+    font-weight: 1000;
+    width: 6%;
+    height: 32px;
+    border-radius: 8px;
+     position: fixed;
+     top: 430px;
+     left: 12%;  
+}
+.gren{
+    border: 8px;
+    font-size: 1vw;
+    font-weight: 1000;
+    background-color: rgb(0, 255, 4);
+    width: 5%;
+    height: 32px;
+    border-radius: 8px;
+    position: fixed;
+    top: 430px;
+    left: 19%;
+}
+
+.error{
+    color: #000000;
+}
+.status{
+    font-size: 7vw;
+   text-align: center;
+}
+.message{
+    font-size: 3vw;
+ text-align: center;
+
+}
+.go{
+    border: 1px solid white;
+    background-color: #ffffff;
+    font-size: 2vw;
+    color: #000;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10vh;
+    left: 45vw;
+    
+}
+
+@media screen and (max-width:1000px) {
+    .img {
+        width: 11%;
+    }
+    .titel {
+     left: 36%;
+        font-size: 4vw;
+     }
+   
+    .point {
+        width: 20%;
+        left: 3vw;
+    }
+    .text {
+        left: 32%;
+    }
+    .textarea {
+        width: 40vw;
+        font-size: 2svw;
+        padding-left: 5.5svw;
+        
+    }
+    .label{
+        font-size: 4vw;
+        left: 40vw;
+    }
+    .group{
+        font-size: 2vw;
+        left: 44.5svw;
+    }
+    .text2 {
+      
+      left: 0;
+    }
+    
+.red{
+  width: 8vw;
+  left: 8%;
+
+}
+ .yellow{
+    font-size:1.6vw;
+    width: 10vw;
+left:17%;
+}
+.gren{
+    font-size:1.6vw;
+    width: 10vw;
+left: 29%;
+}
+}
+
+
+
+@media screen and (max-width:501px) {
+
+    .img {
+        width: 17%;
+    } 
+    .titel {
+        left: 23vw;
+        font-size: 7vw;
+     }
+    .point {
+      display: none;
+    }
+    .text {
+        left: 0;
+    }
+    .textarea {
+        width: 100vw;
+        font-size: 6svw;
+        padding-top: 30px;
+    
+    }
+  
+    .label{
+        font-size: 7vw;
+        left: 30vw;
+    }
+    .group{
+        font-size: 4vw;
+        left: 35.5svw;
+    }
+.text2 {
+    width: 100vw;
+    left: 0;
+}
+.textarea2 {
+width:90vw ;
+}
+.bar{
+    width: 90svw;
+}
+
+.red{
+    width: 20vw;
+    left: 8%;
+}
+.yellow{
+    width: 21vw;
+    font-size: 3vw;
+    left: 32%;
+}
+.gren{
+    font-size: 3vw;
+    width: 20vw;
+    left: 57%;
+}
+}
+@media screen and (max-width:200px) {
+    .img{
+        width: 45vw;
+        top: 40px;
+        left: 26vw;
+    }
+    .titel {
+        top: 0vh;
+        left: 0vw;
+        font-size: 12vw;
+     }
+    .text {
+        top: 100px;
+    }
+    .textarea {
+        height: 150px;
+        font-weight: 1000;
+        font-size: 6.5vw;
+        padding-left: 0;
+        padding-top: 60px;
+    }
+ .label{
+    font-size: 15vw;
+    top: 300px;
+    left: 5%;
+}   
+.group{
+    font-size: 12vw;
+    top: 350px;
+    left: 5%;
+}     
+.red{
+    width: 20%;
+    left: 10%;
+}
+.yellow{
+    width: 32%;
+    font-weight: 900;
+    font-size: 5vw;
+    left: 32%;
+}
+.gren{
+    width: 23%;
+    font-size: 5vw;
+    font-weight: 1000;
+    left: 66%;
+}
+}
+ 
