@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII-ART-WEB</title>
+    <style>
+        textarea {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            white-space: pre;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align: center;">
+
+        <h1 style="font-size: 50px; "><strong>ASCII-ART-WEB</strong></h1>
+    </div>
+    <div style="text-align: center;">
+        <form action="page.html" method="post">
+            <div style="overflow: auto;">
+                <textarea placeholder="「 ✦ Text to Convert ✦ 」" style="width: 200px;height: 70px; "
+                    name="text" required maxlength="1000"></textarea>
+                <br><br>
+                <label for="select-banner"><strong style="font-size: 40;"> ▶ Select banner</strong></label>
+                <select name="banner">
+                    <optgroup label="⬇⬇⬇⬇⬇⬇⬇⬇">
+                        <option value="standard">standard</option>
+                        <option value="shadow">shadow</option>
+                        <option value="thinkertoy">thinkertoy</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div>
+
+                <input type="submit">
+                <input type="reset">
+            </div>
+    </div>
+    </form>
+    </div>
+
+        <div style="text-align:center;">
+            <textarea style="margin-top: 5%; width: 70%;height: 300px; " class="text2" readonly>{{.}}</textarea>
+        </div>
+
+ 
+</body>
+
+</html>
